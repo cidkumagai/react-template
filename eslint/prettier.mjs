@@ -1,4 +1,4 @@
-import pluginReact from 'eslint-plugin-react';
+import eslintConfigPrettier from 'eslint-config-prettier';
 
 /** @type {Pick<ESLintConfig, "name" | "files" | "plugins" | "rules">} */
 const prettierConfig = {
@@ -14,17 +14,10 @@ const prettierConfig = {
     '**/*.tsx',
     '**/*.d.ts',
   ],
-  plugins: {
-    react: pluginReact,
-  },
   rules: {
+    ...eslintConfigPrettier.rules,
     curly: 'off',
     'no-unexpected-multiline': 'off',
-    'react/jsx-child-element-spacing': 'off',
-    'react/jsx-closing-bracket-location': 'off',
-    'react/jsx-max-props-per-line': 'off',
-    'react/jsx-newline': 'off',
-    'react/jsx-one-expression-per-line': 'off',
   },
 };
 
