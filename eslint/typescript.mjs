@@ -1,33 +1,40 @@
-import { plugin as tseslintPlugin } from "typescript-eslint"
+import { plugin as tseslintPlugin } from 'typescript-eslint';
 
 /** @type {Pick<ESLintConfig, "name" | "files" | "plugins" | "rules">} */
 const typescriptConfig = {
-  name: "typescript/base",
+  name: 'typescript/base',
   files: [
-    "**/*.js",
-    "**/*.cjs",
-    "**/*.mjs",
-    "**/*.jsx",
-    "**/*.ts",
-    "**/*.cts",
-    "**/*.mts",
-    "**/*.tsx",
-    "**/*.d.ts",
+    '**/*.js',
+    '**/*.cjs',
+    '**/*.mjs',
+    '**/*.jsx',
+    '**/*.ts',
+    '**/*.cts',
+    '**/*.mts',
+    '**/*.tsx',
+    '**/*.d.ts',
   ],
   plugins: {
-    "@typescript-eslint": tseslintPlugin,
+    '@typescript-eslint': tseslintPlugin,
   },
   rules: {
-    "@typescript-eslint/no-unused-vars": [
-      "error",
+    ...tseslintPlugin.configs.recommended.rules,
+    '@typescript-eslint/no-unused-vars': [
+      'error',
       {
-        argsIgnorePattern: "^_",
-        varsIgnorePattern: "^_",
-        caughtErrorsIgnorePattern: "^_",
-        destructuredArrayIgnorePattern: "^_",
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+        destructuredArrayIgnorePattern: '^_',
+      },
+    ],
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      {
+        prefer: 'type-imports',
       },
     ],
   },
-}
+};
 
-export { typescriptConfig }
+export { typescriptConfig };
