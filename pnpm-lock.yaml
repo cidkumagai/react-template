@@ -13,12 +13,6 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^19.2.2
         version: 19.2.2
-      '@eslint/compat':
-        specifier: ^1.1.1
-        version: 1.1.1
-      eslint-plugin-import-replace:
-        specifier: ^1.0.0
-        version: 1.0.0(eslint@9.9.1(jiti@1.21.6))
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -32,6 +26,9 @@ importers:
         specifier: ^2.0.5
         version: 2.0.5(@types/node@22.5.0)
     devDependencies:
+      '@eslint/compat':
+        specifier: ^1.1.1
+        version: 1.1.1
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.4
@@ -56,6 +53,9 @@ importers:
       eslint-plugin-import:
         specifier: ^2.29.1
         version: 2.29.1(@typescript-eslint/parser@8.2.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.1(jiti@1.21.6))
+      eslint-plugin-import-replace:
+        specifier: ^1.0.0
+        version: 1.0.0(eslint@9.9.1(jiti@1.21.6))
       eslint-plugin-prettier:
         specifier: ^5.2.1
         version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.9.1(jiti@1.21.6)))(eslint@9.9.1(jiti@1.21.6))(prettier@3.3.3)
