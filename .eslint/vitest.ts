@@ -1,10 +1,13 @@
-import { fixupPluginRules } from "@eslint/compat"
-import pluginVitest from "eslint-plugin-vitest"
+import { fixupPluginRules } from "@eslint/compat";
+import pluginVitest from "@vitest/eslint-plugin";
 
-/** @type {Pick<ESLintConfig, "name" | "files" | "plugins" | "rules">} */
-const vitestConfig = {
+import { sharedTestFiles } from "./shared";
+
+import type { Linter } from "eslint";
+
+export const vitestConfig: Linter.Config = {
   name: "vitest/base",
-  files: ["**/*.test.ts", "**/*.test.tsx"],
+  files: sharedTestFiles,
   plugins: {
     vitest: fixupPluginRules(pluginVitest),
   },
@@ -52,6 +55,4 @@ const vitestConfig = {
       },
     ],
   },
-}
-
-export { vitestConfig }
+};
