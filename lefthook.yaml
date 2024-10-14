@@ -13,11 +13,11 @@ pre-commit:
       tags: src
       glob: "*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,d.ts}"
       run: |
-        pnpm eslint {staged_files} --fix --max-warnings=0
+        pnpm eslint {staged_files} --max-warnings=0 --fix --cache --flag unstable_ts_config
       stage_fixed: true
 
 commit-msg:
   commands:
-    "lint the commit message":
+    commitlint:
       run: |
         pnpm commitlint --edit {1}
