@@ -1,20 +1,20 @@
-import globals from "globals";
-import { parser } from "typescript-eslint";
+import globals from 'globals';
+import { parser } from 'typescript-eslint';
 
-import { sharedFiles } from "./shared";
+import { sharedFiles } from './shared';
 
-import type { TSESLint } from "@typescript-eslint/utils";
+import type { TSESLint } from '@typescript-eslint/utils';
 
 export const languageOptionFactory = (
   tsConfigPath: string,
 ): TSESLint.FlatConfig.Config => ({
-  name: "eslint/language-options",
+  name: 'eslint/language-options',
   files: [...sharedFiles],
   languageOptions: {
     parser,
     parserOptions: {
       ecmaVersion: 10,
-      sourceType: "module",
+      sourceType: 'module',
       project: tsConfigPath,
       ecmaFeatures: {
         jsx: true,

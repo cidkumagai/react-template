@@ -1,1 +1,1 @@
-declare module "eslint-plugin-import-replace";
+declare module 'eslint-plugin-import-replace';

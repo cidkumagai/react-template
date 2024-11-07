@@ -1,12 +1,12 @@
-import { sharedFiles } from "./shared";
+import { sharedFiles } from './shared';
 
-import type { Linter } from "eslint";
+import type { Linter } from 'eslint';
 
 export const baseConfig: Linter.Config = {
-  name: "eslint/base",
+  name: 'eslint/base',
   files: sharedFiles,
   rules: {
-    "no-var": "error",
-    "no-console": ["warn", { allow: ["warn", "error"] }],
+    'no-var': 'error',
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
   },
 };
