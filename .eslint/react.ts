@@ -1,8 +1,7 @@
-import pluginReact from 'eslint-plugin-react';
+import type { Linter } from 'eslint';
 
 import { sharedFiles } from './shared';
-
-import type { Linter } from 'eslint';
+import pluginReact from 'eslint-plugin-react';
 
 export const reactConfig: Linter.Config = {
   name: 'eslint/react',

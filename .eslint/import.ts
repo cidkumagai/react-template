@@ -1,10 +1,9 @@
+import type { Linter } from 'eslint';
+
+import { sharedFiles } from './shared';
 import { fixupPluginRules } from '@eslint/compat';
 import { flatConfigs } from 'eslint-plugin-import';
 import pluginUnusedImports from 'eslint-plugin-unused-imports';
-
-import { sharedFiles } from './shared';
-
-import type { Linter } from 'eslint';
 
 export const importConfigArray: Linter.Config[] = [
   {
@@ -19,16 +18,7 @@ export const importConfigArray: Linter.Config[] = [
       'import/order': [
         'error',
         {
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            'parent',
-            'sibling',
-            'index',
-            'object',
-            'type',
-          ],
+          groups: ['type'],
           'newlines-between': 'always',
           pathGroupsExcludedImportTypes: ['builtin'],
           alphabetize: { order: 'asc', caseInsensitive: true },

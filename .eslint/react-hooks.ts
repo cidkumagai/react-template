@@ -1,9 +1,8 @@
-import { fixupPluginRules } from '@eslint/compat';
-import pluginReactHooks from 'eslint-plugin-react-hooks';
+import type { Linter } from 'eslint';
 
 import { sharedFiles } from './shared';
-
-import type { Linter } from 'eslint';
+import { fixupPluginRules } from '@eslint/compat';
+import pluginReactHooks from 'eslint-plugin-react-hooks';
 
 export const reactHooksConfig: Linter.Config = {
   name: 'eslint/react-hooks',

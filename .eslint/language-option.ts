@@ -1,9 +1,8 @@
-import globals from 'globals';
-import { parser } from 'typescript-eslint';
+import type { TSESLint } from '@typescript-eslint/utils';
 
 import { sharedFiles } from './shared';
-
-import type { TSESLint } from '@typescript-eslint/utils';
+import globals from 'globals';
+import { parser } from 'typescript-eslint';
 
 export const languageOptionFactory = (
   tsConfigPath: string,

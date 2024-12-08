@@ -1,9 +1,8 @@
-import { fixupPluginRules } from '@eslint/compat';
-import pluginVitest from '@vitest/eslint-plugin';
+import type { Linter } from 'eslint';
 
 import { sharedTestFiles } from './shared';
-
-import type { Linter } from 'eslint';
+import { fixupPluginRules } from '@eslint/compat';
+import pluginVitest from '@vitest/eslint-plugin';
 
 export const vitestConfig: Linter.Config = {
   name: 'vitest/base',

@@ -1,6 +1,6 @@
-import { sharedFiles } from './shared';
-
 import type { Linter } from 'eslint';
+
+import { sharedFiles } from './shared';
 
 export const baseConfig: Linter.Config = {
   name: 'eslint/base',

@@ -1,20 +1,15 @@
-import { plugin } from 'typescript-eslint';
-
-import { sharedFiles } from './shared';
-
 import type { TSESLint } from '@typescript-eslint/utils';
 
+import { sharedFiles } from './shared';
+import { plugin } from 'typescript-eslint';
+
 export const typescriptConfig: TSESLint.FlatConfig.Config = {
-  name: 'eslint/typescript',
+  name: 'typescript/base',
   files: sharedFiles,
   plugins: {
     '@typescript-eslint': plugin,
   },
   rules: {
-    '@typescript-eslint/consistent-type-imports': [
-      'warn',
-      { prefer: 'type-imports' },
-    ],
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
@@ -24,6 +19,12 @@ export const typescriptConfig: TSESLint.FlatConfig.Config = {
         destructuredArrayIgnorePattern: '^_',
       },
     ],
-    '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      {
+        prefer: 'type-imports',
+      },
+    ],
+    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
   },
 };

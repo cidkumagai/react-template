@@ -1,9 +1,8 @@
-import { fixupPluginRules } from '@eslint/compat';
-import pluginTestingLibrary from 'eslint-plugin-testing-library';
+import type { Linter } from 'eslint';
 
 import { sharedTestFiles } from './shared';
-
-import type { Linter } from 'eslint';
+import { fixupPluginRules } from '@eslint/compat';
+import pluginTestingLibrary from 'eslint-plugin-testing-library';
 
 export const testingLibraryConfig: Linter.Config = {
   name: 'eslint/testing-library',
