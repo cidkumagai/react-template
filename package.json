@@ -22,7 +22,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
-    "@eslint/compat": "^1.2.0",
+    "@eslint/compat": "^1.2.4",
     "@testing-library/jest-dom": "^6.6.3",
     "@types/node": "^22.7.4",
     "@types/react": "^18.3.10",
