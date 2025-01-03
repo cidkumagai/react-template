@@ -1,0 +1,11 @@
+name: Auto Assign
+
+on: pull_request
+
+jobs:
+  assign:
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: gh pr edit --reviewer cidkumagai
