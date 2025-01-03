@@ -6,8 +6,6 @@ jobs:
   assign:
     if: ${{ github.actor == 'dependabot[bot]' }}
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - run: gh pr edit ${{ github.event.pull_request.number }} --reviewer cidkumagai
