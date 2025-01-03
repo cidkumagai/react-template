@@ -17,5 +17,5 @@ jobs:
         uses: dependabot/fetch-metadata@v2
       - if: ${{ steps.meta.outputs.update-type == 'version-update:semver-patch' }}
         run: |
-          gh pr review "${GITHUB_TOKEN}" --approve
-          gh pr merge "${GITHUB_TOKEN}" --merge --auto
+          gh pr review "${GITHUB_HEAD_REF}" --approve
+          gh pr merge "${GITHUB_HEAD_REF}" --merge --auto
