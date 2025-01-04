@@ -1,6 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
+  "schedule": ["* 3-9 * * 0,6"],
+  "labels": ["dependencies"],
+  "rebaseWhen": "conflicted",
+  "timezone": "Asia/Tokyo",
+  "prHourlyLimit": 10,
   "packageRules": [
     {
       "groupName": "eslint packages",
@@ -28,7 +33,8 @@
     },
     {
       "matchUpdateTypes": ["minor", "major"],
-      "automerge": false
+      "automerge": false,
+      "reviewers": ["cidkumagai"]
     }
   ]
 }
