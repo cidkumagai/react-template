@@ -1,6 +1,34 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
+  "extends": ["config:recommended"],
+  "packageRules": [
+    {
+      "groupName": "eslint packages",
+      "packagePatterns": ["^eslint", "^@eslint", "^@typescript-eslint"],
+      "automerge": true,
+      "updateTypes": ["patch"]
+    },
+    {
+      "groupName": "react packages",
+      "packagePatterns": ["^react"],
+      "automerge": true,
+      "updateTypes": ["patch"]
+    },
+    {
+      "groupName": "commitlint packages",
+      "packagePatterns": ["^@commitlint"],
+      "automerge": true,
+      "updateTypes": ["patch"]
+    },
+    {
+      "groupName": "type packages",
+      "packagePatterns": ["^@types"],
+      "automerge": true,
+      "updateTypes": ["patch"]
+    },
+    {
+      "updateTypes": ["minor", "major"],
+      "automerge": false
+    }
   ]
 }
