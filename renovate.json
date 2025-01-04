@@ -4,30 +4,30 @@
   "packageRules": [
     {
       "groupName": "eslint packages",
-      "packagePatterns": ["^eslint", "^@eslint", "^@typescript-eslint"],
       "automerge": true,
-      "updateTypes": ["patch"]
+      "matchUpdateTypes": ["patch"],
+      "matchPackageNames": ["/^eslint/", "/^@eslint/", "/^@typescript-eslint/"]
     },
     {
       "groupName": "react packages",
-      "packagePatterns": ["^react"],
       "automerge": true,
-      "updateTypes": ["patch"]
+      "matchUpdateTypes": ["patch"],
+      "matchPackageNames": ["/^react/"]
     },
     {
       "groupName": "commitlint packages",
-      "packagePatterns": ["^@commitlint"],
       "automerge": true,
-      "updateTypes": ["patch"]
+      "matchUpdateTypes": ["patch"],
+      "matchPackageNames": ["/^@commitlint/"]
     },
     {
       "groupName": "type packages",
-      "packagePatterns": ["^@types"],
       "automerge": true,
-      "updateTypes": ["patch"]
+      "matchUpdateTypes": ["patch"],
+      "matchPackageNames": ["/^@types/"]
     },
     {
-      "updateTypes": ["minor", "major"],
+      "matchUpdateTypes": ["minor", "major"],
       "automerge": false
     }
   ]
