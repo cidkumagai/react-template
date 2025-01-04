@@ -32,6 +32,10 @@
       "matchPackageNames": ["/^@types/"]
     },
     {
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    },
+    {
       "matchUpdateTypes": ["minor", "major"],
       "automerge": false,
       "reviewers": ["cidkumagai"]
