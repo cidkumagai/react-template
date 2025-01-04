@@ -1,4 +1,4 @@
-name: Auto Patch Merge
+name: Dependabot Auto Merge
 
 on: pull_request
 
@@ -15,7 +15,12 @@ jobs:
       - uses: actions/checkout@v4
       - id: meta
         uses: dependabot/fetch-metadata@v2
-      - if: ${{ steps.meta.outputs.update-type == 'version-update:semver-patch' }}
+      - name: Approve and merge if patch update
+        if: ${{ steps.meta.outputs.update-type == 'version-update:semver-patch' }}
         run: |
           gh pr review "${GITHUB_HEAD_REF}" --approve
           gh pr merge "${GITHUB_HEAD_REF}" --merge --auto
+
+      - name: Assign reviewer if not patch
+        if: ${{ steps.meta.outputs.update-type != 'version-update:semver-patch' }}
+        run: gh pr edit "${GITHUB_HEAD_REF}" --add-reviewer cidkumagai
