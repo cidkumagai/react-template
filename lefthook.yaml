@@ -1,11 +1,11 @@
 pre-commit:
   piped: true
   commands:
-    format:
+    secretlint:
       priority: 1
-      glob: '*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,d.ts,md,mdx,yaml,yml,json,html,css}'
+      glob: '**/*'
       run: |
-        pnpm prettier {staged_files} --write
+        pnpm secretlint {staged_files}
       stage_fixed: true
 
     lint:
@@ -14,6 +14,13 @@ pre-commit:
       glob: '*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,d.ts}'
       run: |
         pnpm eslint {staged_files} --max-warnings=0 --fix --cache --flag unstable_ts_config
+      stage_fixed: true
+
+    format:
+      priority: 3
+      glob: '*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,d.ts,md,mdx,yaml,yml,json,html,css}'
+      run: |
+        pnpm prettier {staged_files} --write
       stage_fixed: true
 
 commit-msg:
