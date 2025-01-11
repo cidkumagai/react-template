@@ -1,0 +1,15 @@
+name: Auto Assign
+
+on: pull_request
+
+jobs:
+  auto-assign:
+    name: Auto Assign
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: gh pr edit "${GITHUB_HEAD_REF}" --add-assignee cidkumagai
