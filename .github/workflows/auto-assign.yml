@@ -12,4 +12,4 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
-      - run: gh pr edit "${GITHUB_HEAD_REF}" --add-assignee @me
+      - run: gh pr edit "${GITHUB_HEAD_REF}" --add-assignee cidkumagai
