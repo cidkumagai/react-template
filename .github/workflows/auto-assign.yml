@@ -4,6 +4,7 @@ on: pull_request
 
 jobs:
   auto-assign:
+    if: ${{ github.actor != 'renovate[bot]' }}
     name: Auto Assign
     runs-on: ubuntu-latest
     permissions:
