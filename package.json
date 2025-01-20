@@ -8,7 +8,7 @@
     "build": "vite build",
     "test": "vitest",
     "test:ci": "vitest run --coverage",
-    "lint": "eslint . --max-warnings=0 --cache --flag unstable_ts_config",
+    "lint": "eslint . --max-warnings=0 --cache",
     "format": "prettier --write .",
     "preview": "vite preview",
     "prepare": "lefthook install",
