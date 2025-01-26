@@ -13,7 +13,7 @@ pre-commit:
       tags: src
       glob: '*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,d.ts}'
       run: |
-        pnpm eslint {staged_files} --max-warnings=0 --fix --cache --flag unstable_ts_config
+        pnpm eslint {staged_files} --max-warnings=0 --fix --cache
       stage_fixed: true
 
     format:
