@@ -1,10 +1,16 @@
 import react from '@vitejs/plugin-react-swc';
+import path from 'path';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   test: {
-    include: ['src/**/*.test.{ts,tsx}'],
+    include: ['__test__/**/*.test.{ts,tsx}'],
     environment: 'jsdom',
     globals: true,
     watch: false,
@@ -14,6 +20,6 @@ export default defineConfig({
       exclude: ['**/dist', '**/*.d.ts'],
     },
     onConsoleLog: (_log, type) => type !== 'stderr',
-    setupFiles: ['tests/setup-test.ts'],
+    setupFiles: ['__test__/setup-test.ts'],
   },
 });
