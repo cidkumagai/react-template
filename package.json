@@ -47,7 +47,7 @@
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^15.9.0",
     "jiti": "^2.4.2",
-    "jsdom": "^25.0.1",
+    "jsdom": "^26.0.0",
     "lefthook": "^1.7.18",
     "prettier": "^3.3.3",
     "secretlint": "^9.0.0",
