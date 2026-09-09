@@ -30,7 +30,7 @@
     "eslint-plugin-testing-library": "^7.16.2",
     "eslint-plugin-unused-imports": "^4.4.1",
     "jsdom": "^26.0.0",
-    "lefthook": "^1.7.18",
+    "lefthook": "^2.0.0",
     "typescript": "5.8.3",
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",
     "vite-plus": "latest",
