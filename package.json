@@ -31,7 +31,7 @@
     "eslint-plugin-unused-imports": "^4.4.1",
     "jsdom": "^26.0.0",
     "lefthook": "^1.7.18",
-    "typescript": "5.8.3",
+    "typescript": "5.9.3",
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",
     "vite-plus": "latest",
     "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
