@@ -42,7 +42,7 @@ jobs:
       - name: Check (format / lint / type check)
         run: |
           set -o pipefail
-          pnpm exec vp check 2>&1 | tee /tmp/check.log || { echo '```' >> "$GITHUB_STEP_SUMMARY"; tail -c 60000 /tmp/check.log >> "$GITHUB_STEP_SUMMARY"; echo '```' >> "$GITHUB_STEP_SUMMARY"; exit 1; }
+          pnpm exec vp check 2>&1 | tee /tmp/check.log || { msg=$(tail -c 30000 /tmp/check.log | sed 's/\x1b\[[0-9;]*m//g' | sed ':a;N;$!ba;s/%/%25/g;s/\r/%0D/g;s/\n/%0A/g'); echo "::error title=vp-check::$msg"; exit 1; }
 
       - name: Lint (no warnings allowed)
         run: pnpm lint
