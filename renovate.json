@@ -43,6 +43,11 @@
       "reviewers": ["cidkumagai"]
     },
     {
+      "description": "vite-plus CLI / core / test must always be updated together",
+      "groupName": "vite-plus packages",
+      "matchPackageNames": ["vite-plus", "@voidzero-dev/vite-plus-core", "@voidzero-dev/vite-plus-test"]
+    },
+    {
       "description": "GitHub Actions (SHA pinned): auto-merge digest/patch/minor updates after CI passes",
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["patch", "minor", "digest", "pinDigest"],
