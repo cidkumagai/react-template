@@ -26,7 +26,7 @@ importers:
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.6.1
-        version: 19.8.1(@types/node@22.15.29)(typescript@5.9.3)
+        version: 19.8.1(@types/node@22.20.5)(typescript@5.9.3)
       '@commitlint/config-conventional':
         specifier: ^19.5.0
         version: 19.8.1
@@ -35,7 +35,7 @@ importers:
         version: 6.9.1
       '@types/node':
         specifier: ^22.7.4
-        version: 22.15.29
+        version: 22.20.5
       '@types/react':
         specifier: ^19.0.0
         version: 19.1.14
@@ -44,7 +44,7 @@ importers:
         version: 19.1.9(@types/react@19.1.14)
       '@vitejs/plugin-react':
         specifier: ^6.0.1
-        version: 6.1.2(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.9.3))
+        version: 6.1.2(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.20.5)(jiti@2.4.2)(typescript@5.9.3))
       '@vitest/coverage-v8':
         specifier: 4.1.11
         version: 4.1.11(@voidzero-dev/vite-plus-test@0.1.20)
@@ -65,13 +65,13 @@ importers:
         version: 5.9.3
       vite:
         specifier: npm:@voidzero-dev/vite-plus-core@0.1.20
-        version: '@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.9.3)'
+        version: '@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.20.5)(jiti@2.4.2)(typescript@5.9.3)'
       vite-plus:
         specifier: 0.1.20
-        version: 0.1.20(@types/node@22.15.29)(@vitest/coverage-v8@4.1.11)(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.9.3))(jiti@2.4.2)(jsdom@26.1.0)(typescript@5.9.3)
+        version: 0.1.20(@types/node@22.20.5)(@vitest/coverage-v8@4.1.11)(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.20.5)(jiti@2.4.2)(typescript@5.9.3))(jiti@2.4.2)(jsdom@26.1.0)(typescript@5.9.3)
       vitest:
         specifier: npm:@voidzero-dev/vite-plus-test@0.1.20
-        version: '@voidzero-dev/vite-plus-test@0.1.20(@types/node@22.15.29)(@vitest/coverage-v8@4.1.11)(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.9.3))(jiti@2.4.2)(jsdom@26.1.0)(typescript@5.9.3)'
+        version: '@voidzero-dev/vite-plus-test@0.1.20(@types/node@22.20.5)(@vitest/coverage-v8@4.1.11)(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.20.5)(jiti@2.4.2)(typescript@5.9.3))(jiti@2.4.2)(jsdom@26.1.0)(typescript@5.9.3)'
 
 packages:
 
@@ -618,8 +618,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@22.15.29':
-    resolution: {integrity: sha512-LNdjOkUDlU1RZb8e1kOIUpN1qQUlzGkEtbVNo53vbrwDg5om6oduhm4SiUaPW5ASTXhAiP0jInWG8Qx9fVlOeQ==}
+  '@types/node@22.20.5':
+    resolution: {integrity: sha512-U2+DNr+wSjpsTS/wZGYHq7GcwfuSmKiKvoPvK22zwTlRhU91yOniN4qRR5KhIjvif7ysw/dz/hKmfDH0Ris4aA==}
 
   '@types/react-dom@19.1.9':
     resolution: {integrity: sha512-qXRuZaOsAdXKFyOhRBg6Lqqc0yay13vN7KrIg4L7N4aaHN68ma9OK3NE1BoDFgFOTfM7zg+3/8+2n8rLUH3OKQ==}
@@ -1922,11 +1922,11 @@ snapshots:
 
   '@bcoe/v8-coverage@1.0.2': {}
 
-  '@commitlint/cli@19.8.1(@types/node@22.15.29)(typescript@5.9.3)':
+  '@commitlint/cli@19.8.1(@types/node@22.20.5)(typescript@5.9.3)':
     dependencies:
       '@commitlint/format': 19.8.1
       '@commitlint/lint': 19.8.1
-      '@commitlint/load': 19.8.1(@types/node@22.15.29)(typescript@5.9.3)
+      '@commitlint/load': 19.8.1(@types/node@22.20.5)(typescript@5.9.3)
       '@commitlint/read': 19.8.1
       '@commitlint/types': 19.8.1
       tinyexec: 1.0.1
@@ -1973,7 +1973,7 @@ snapshots:
       '@commitlint/rules': 19.8.1
       '@commitlint/types': 19.8.1
 
-  '@commitlint/load@19.8.1(@types/node@22.15.29)(typescript@5.9.3)':
+  '@commitlint/load@19.8.1(@types/node@22.20.5)(typescript@5.9.3)':
     dependencies:
       '@commitlint/config-validator': 19.8.1
       '@commitlint/execute-rule': 19.8.1
@@ -1981,7 +1981,7 @@ snapshots:
       '@commitlint/types': 19.8.1
       chalk: 5.4.1
       cosmiconfig: 9.0.0(typescript@5.9.3)
-      cosmiconfig-typescript-loader: 6.1.0(@types/node@22.15.29)(cosmiconfig@9.0.0(typescript@5.9.3))(typescript@5.9.3)
+      cosmiconfig-typescript-loader: 6.1.0(@types/node@22.20.5)(cosmiconfig@9.0.0(typescript@5.9.3))(typescript@5.9.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -2293,7 +2293,7 @@ snapshots:
 
   '@types/conventional-commits-parser@5.0.1':
     dependencies:
-      '@types/node': 22.15.29
+      '@types/node': 22.20.5
 
   '@types/deep-eql@4.0.2': {}
 
@@ -2305,7 +2305,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@22.15.29':
+  '@types/node@22.20.5':
     dependencies:
       undici-types: 6.21.0
 
@@ -2368,10 +2368,10 @@ snapshots:
       '@typescript-eslint/types': 8.59.2
       eslint-visitor-keys: 5.0.1
 
-  '@vitejs/plugin-react@6.1.2(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.9.3))':
+  '@vitejs/plugin-react@6.1.2(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.20.5)(jiti@2.4.2)(typescript@5.9.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
-      vite: '@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.9.3)'
+      vite: '@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.20.5)(jiti@2.4.2)(typescript@5.9.3)'
 
   '@vitest/coverage-v8@4.1.11(@voidzero-dev/vite-plus-test@0.1.20)':
     dependencies:
@@ -2385,7 +2385,7 @@ snapshots:
       obug: 2.1.1
       std-env: 4.1.0
       tinyrainbow: 3.1.0
-      vitest: '@voidzero-dev/vite-plus-test@0.1.20(@types/node@22.15.29)(@vitest/coverage-v8@4.1.11)(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.9.3))(jiti@2.4.2)(jsdom@26.1.0)(typescript@5.9.3)'
+      vitest: '@voidzero-dev/vite-plus-test@0.1.20(@types/node@22.20.5)(@vitest/coverage-v8@4.1.11)(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.20.5)(jiti@2.4.2)(typescript@5.9.3))(jiti@2.4.2)(jsdom@26.1.0)(typescript@5.9.3)'
 
   '@vitest/pretty-format@4.1.11':
     dependencies:
@@ -2397,14 +2397,14 @@ snapshots:
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.0
 
-  '@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.9.3)':
+  '@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.20.5)(jiti@2.4.2)(typescript@5.9.3)':
     dependencies:
       '@oxc-project/runtime': 0.127.0
       '@oxc-project/types': 0.127.0
       lightningcss: 1.32.0
       postcss: 8.5.14
     optionalDependencies:
-      '@types/node': 22.15.29
+      '@types/node': 22.20.5
       fsevents: 2.3.3
       jiti: 2.4.2
       typescript: 5.9.3
@@ -2427,11 +2427,11 @@ snapshots:
   '@voidzero-dev/vite-plus-linux-x64-musl@0.1.20':
     optional: true
 
-  '@voidzero-dev/vite-plus-test@0.1.20(@types/node@22.15.29)(@vitest/coverage-v8@4.1.11)(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.9.3))(jiti@2.4.2)(jsdom@26.1.0)(typescript@5.9.3)':
+  '@voidzero-dev/vite-plus-test@0.1.20(@types/node@22.20.5)(@vitest/coverage-v8@4.1.11)(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.20.5)(jiti@2.4.2)(typescript@5.9.3))(jiti@2.4.2)(jsdom@26.1.0)(typescript@5.9.3)':
     dependencies:
       '@standard-schema/spec': 1.1.0
       '@types/chai': 5.2.3
-      '@voidzero-dev/vite-plus-core': 0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.9.3)
+      '@voidzero-dev/vite-plus-core': 0.1.20(@types/node@22.20.5)(jiti@2.4.2)(typescript@5.9.3)
       es-module-lexer: 1.7.0
       obug: 2.1.1
       pixelmatch: 7.2.0
@@ -2441,10 +2441,10 @@ snapshots:
       tinybench: 2.9.0
       tinyexec: 1.1.2
       tinyglobby: 0.2.16
-      vite: '@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.9.3)'
+      vite: '@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.20.5)(jiti@2.4.2)(typescript@5.9.3)'
       ws: 8.20.0
     optionalDependencies:
-      '@types/node': 22.15.29
+      '@types/node': 22.20.5
       '@vitest/coverage-v8': 4.1.11(@voidzero-dev/vite-plus-test@0.1.20)
       jsdom: 26.1.0
     transitivePeerDependencies:
@@ -2580,9 +2580,9 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
-  cosmiconfig-typescript-loader@6.1.0(@types/node@22.15.29)(cosmiconfig@9.0.0(typescript@5.9.3))(typescript@5.9.3):
+  cosmiconfig-typescript-loader@6.1.0(@types/node@22.20.5)(cosmiconfig@9.0.0(typescript@5.9.3))(typescript@5.9.3):
     dependencies:
-      '@types/node': 22.15.29
+      '@types/node': 22.20.5
       cosmiconfig: 9.0.0(typescript@5.9.3)
       jiti: 2.4.2
       typescript: 5.9.3
@@ -3337,11 +3337,11 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite-plus@0.1.20(@types/node@22.15.29)(@vitest/coverage-v8@4.1.11)(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.9.3))(jiti@2.4.2)(jsdom@26.1.0)(typescript@5.9.3):
+  vite-plus@0.1.20(@types/node@22.20.5)(@vitest/coverage-v8@4.1.11)(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.20.5)(jiti@2.4.2)(typescript@5.9.3))(jiti@2.4.2)(jsdom@26.1.0)(typescript@5.9.3):
     dependencies:
       '@oxc-project/types': 0.127.0
-      '@voidzero-dev/vite-plus-core': 0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.9.3)
-      '@voidzero-dev/vite-plus-test': 0.1.20(@types/node@22.15.29)(@vitest/coverage-v8@4.1.11)(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.9.3))(jiti@2.4.2)(jsdom@26.1.0)(typescript@5.9.3)
+      '@voidzero-dev/vite-plus-core': 0.1.20(@types/node@22.20.5)(jiti@2.4.2)(typescript@5.9.3)
+      '@voidzero-dev/vite-plus-test': 0.1.20(@types/node@22.20.5)(@vitest/coverage-v8@4.1.11)(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.20.5)(jiti@2.4.2)(typescript@5.9.3))(jiti@2.4.2)(jsdom@26.1.0)(typescript@5.9.3)
       oxfmt: 0.46.0
       oxlint: 1.61.0(oxlint-tsgolint@0.22.0)
       oxlint-tsgolint: 0.22.0
