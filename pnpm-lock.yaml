@@ -7,8 +7,8 @@ settings:
 overrides:
   react: ^19.0.0
   react-dom: ^19.0.0
-  vite: npm:@voidzero-dev/vite-plus-core@latest
-  vitest: npm:@voidzero-dev/vite-plus-test@latest
+  vite: npm:@voidzero-dev/vite-plus-core@0.1.20
+  vitest: npm:@voidzero-dev/vite-plus-test@0.1.20
 
 importers:
 
@@ -64,13 +64,13 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
       vite:
-        specifier: npm:@voidzero-dev/vite-plus-core@latest
+        specifier: npm:@voidzero-dev/vite-plus-core@0.1.20
         version: '@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.8.3)'
       vite-plus:
-        specifier: latest
+        specifier: 0.1.20
         version: 0.1.20(@types/node@22.15.29)(@vitest/coverage-v8@4.1.5)(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.8.3))(jiti@2.4.2)(jsdom@26.1.0)(typescript@5.8.3)
       vitest:
-        specifier: npm:@voidzero-dev/vite-plus-test@latest
+        specifier: npm:@voidzero-dev/vite-plus-test@0.1.20
         version: '@voidzero-dev/vite-plus-test@0.1.20(@types/node@22.15.29)(@vitest/coverage-v8@4.1.5)(@voidzero-dev/vite-plus-core@0.1.20(@types/node@22.15.29)(jiti@2.4.2)(typescript@5.8.3))(jiti@2.4.2)(jsdom@26.1.0)(typescript@5.8.3)'
 
 packages:
