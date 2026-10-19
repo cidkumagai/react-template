@@ -1,6 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
+  "extends": ["config:recommended", "helpers:pinGitHubActionDigests"],
+  "minimumReleaseAge": "7 days",
+  "internalChecksFilter": "strict",
   "schedule": ["* 3-9 * * 0,6"],
   "labels": ["dependencies"],
   "rebaseWhen": "conflicted",
@@ -39,6 +41,21 @@
       "matchUpdateTypes": ["minor", "major"],
       "automerge": false,
       "reviewers": ["cidkumagai"]
+    },
+    {
+      "description": "vite-plus CLI / core / test must always be updated together",
+      "groupName": "vite-plus packages",
+      "matchPackageNames": [
+        "vite-plus",
+        "@voidzero-dev/vite-plus-core",
+        "@voidzero-dev/vite-plus-test"
+      ]
+    },
+    {
+      "description": "GitHub Actions (SHA pinned): auto-merge non-major updates after CI",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["patch", "minor", "digest", "pinDigest"],
+      "automerge": true
     }
   ]
 }
