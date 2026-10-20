@@ -1,0 +1,4 @@
+# Only install versions that have been published for at least 7 days
+# (in minutes). Applies to transitive dependencies too, including
+# lockfile updates made by Renovate.
+minimumReleaseAge: 10080

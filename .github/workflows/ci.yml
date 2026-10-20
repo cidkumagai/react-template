@@ -50,3 +50,15 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      # Exercise the git hooks installed by lefthook (pre-commit + commitlint)
+      - name: Git hooks (lefthook / commitlint)
+        run: |
+          git config user.name "ci"
+          git config user.email "ci@example.com"
+          pnpm exec lefthook install
+          git commit --allow-empty -m "chore: verify git hooks in ci"
+          if git commit --allow-empty -m "this message should be rejected"; then
+            echo "::error::commitlint did not reject an invalid commit message"
+            exit 1
+          fi
