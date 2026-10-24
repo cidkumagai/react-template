@@ -1,0 +1,16 @@
+{
+  "sandbox": {
+    "enabled": true,
+    "filesystem": {
+      "allowWrite": [
+        "~/Library/pnpm/package-manager-store",
+        "~/Library/pnpm/store",
+        "~/Library/Caches/pnpm"
+      ]
+    },
+    "network": {
+      "allowedDomains": ["npm.flatt.tech"],
+      "allowLocalBinding": true
+    }
+  }
+}
