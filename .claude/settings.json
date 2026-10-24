@@ -1,0 +1,41 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f \"$HOME/.claude/hooks/harness-after-edit.py\" ] || exit 0; python3 -I \"$HOME/.claude/hooks/harness-after-edit.py\" --run 'pnpm exec vp check --fix --no-error-on-unmatched-pattern' --glob 'src/*' --glob '__test__/*' --glob '@types/*' --glob '*.ts' --glob '*.mts' --glob 'index.html'",
+            "timeout": 150
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f \"$HOME/.claude/hooks/harness-before-stop.py\" ] || exit 0; python3 -I \"$HOME/.claude/hooks/harness-before-stop.py\" --verify 'pnpm exec vp check && pnpm exec vp test run' --ui 'src/*.tsx' --ui 'src/*.css' --ui 'index.html'",
+            "timeout": 600
+          }
+        ]
+      }
+    ]
+  },
+  "sandbox": {
+    "enabled": true,
+    "filesystem": {
+      "allowWrite": [
+        "~/Library/pnpm/package-manager-store",
+        "~/Library/pnpm/store",
+        "~/Library/Caches/pnpm"
+      ]
+    },
+    "network": {
+      "allowedDomains": ["npm.flatt.tech"],
+      "allowLocalBinding": true
+    }
+  }
+}
