@@ -7,6 +7,26 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## Dev Container
+
+Packages are installed through [Takumi Guard](https://github.com/flatt-security/setup-takumi-guard-npm) (`.npmrc`), both on the host and in the container.
+
+The container runs Claude Code with `~/.claude/CLAUDE.md`, `skills` and `agents` from the host mounted read-only. Sign in once inside the container; credentials are kept in a volume.
+
+From a terminal:
+
+```sh
+npm install -g --registry https://npm.flatt.tech/ @devcontainers/cli
+devcontainer up --workspace-folder .
+devcontainer exec --workspace-folder . claude
+```
+
+To open the dev server from the host browser, start it with `--host` inside the container:
+
+```sh
+devcontainer exec --workspace-folder . pnpm dev --host
+```
+
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:

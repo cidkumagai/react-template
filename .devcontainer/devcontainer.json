@@ -1,0 +1,28 @@
+{
+  "name": "react-template",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22-bookworm",
+  "features": {
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+  },
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-${devcontainerId}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=claude-code-config-${devcontainerId},target=/home/node/.claude,type=volume",
+    "source=${localEnv:HOME}/.claude/CLAUDE.md,target=/home/node/.claude/CLAUDE.md,type=bind,readonly",
+    "source=${localEnv:HOME}/.claude/skills,target=/home/node/.claude/skills,type=bind,readonly",
+    "source=${localEnv:HOME}/.claude/agents,target=/home/node/.claude/agents,type=bind,readonly"
+  ],
+  "initializeCommand": "mkdir -p \"$HOME/.claude/skills\" \"$HOME/.claude/agents\" && touch \"$HOME/.claude/CLAUDE.md\"",
+  "containerEnv": {
+    "CLAUDE_CONFIG_DIR": "/home/node/.claude"
+  },
+  "remoteEnv": {
+    "PATH": "${containerWorkspaceFolder}/node_modules/.bin:${containerEnv:PATH}"
+  },
+  "postCreateCommand": "sudo chown node node_modules /home/node/.claude && pnpm install --frozen-lockfile",
+  "appPort": [5173],
+  "customizations": {
+    "vscode": {
+      "extensions": ["oxc.oxc-vscode"]
+    }
+  }
+}
