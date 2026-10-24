@@ -1,0 +1,17 @@
+{
+  "name": "react-template",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22-bookworm",
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-${devcontainerId}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+  ],
+  "remoteEnv": {
+    "PATH": "${containerWorkspaceFolder}/node_modules/.bin:${containerEnv:PATH}"
+  },
+  "postCreateCommand": "sudo chown node node_modules && pnpm install --frozen-lockfile",
+  "forwardPorts": [5173],
+  "customizations": {
+    "vscode": {
+      "extensions": ["oxc.oxc-vscode"]
+    }
+  }
+}
