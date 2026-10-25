@@ -6,11 +6,24 @@
         "~/Library/pnpm/package-manager-store",
         "~/Library/pnpm/store",
         "~/Library/Caches/pnpm"
+      ],
+      "denyRead": [
+        "~/.ssh",
+        "~/.aws",
+        "~/.gnupg",
+        "~/.config/gh",
+        "~/.docker/config.json"
       ]
     },
     "network": {
       "allowedDomains": ["npm.flatt.tech"],
       "allowLocalBinding": true
+    },
+    "credentials": {
+      "envVars": [
+        { "name": "NPM_TOKEN", "mode": "deny" },
+        { "name": "CLOUDSDK_PROXY_PASSWORD", "mode": "deny" }
+      ]
     }
   }
 }
