@@ -32,8 +32,8 @@
     "jsdom": "^26.0.0",
     "lefthook": "^2.0.0",
     "typescript": "5.9.3",
-    "vite": "npm:@voidzero-dev/vite-plus-core@0.1.20",
-    "vite-plus": "0.1.20",
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.4.0",
+    "vite-plus": "1.4.0",
     "vitest": "npm:@voidzero-dev/vite-plus-test@0.1.20"
   },
   "engines": {
@@ -44,7 +44,7 @@
     "overrides": {
       "react": "^19.0.0",
       "react-dom": "^19.0.0",
-      "vite": "npm:@voidzero-dev/vite-plus-core@0.1.20",
+      "vite": "npm:@voidzero-dev/vite-plus-core@1.4.0",
       "vitest": "npm:@voidzero-dev/vite-plus-test@0.1.20"
     },
     "peerDependencyRules": {
