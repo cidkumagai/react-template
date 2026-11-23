@@ -2,3 +2,20 @@
 # (in minutes). Applies to transitive dependencies too, including
 # lockfile updates made by Renovate.
 minimumReleaseAge: 10080
+overrides:
+  react: ^19.0.0
+  react-dom: ^19.0.0
+  vite@*: 'catalog:'
+  vitest@*: 'catalog:'
+peerDependencyRules:
+  allowAny:
+    - vite
+    - vitest
+  allowedVersions:
+    vite: '*'
+    vitest: '*'
+catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@1.6.0
+  vitest: 5.1.0
+  vite-plus: 1.6.0
+  '@vitest/coverage-v8': 5.1.0
