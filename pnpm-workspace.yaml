@@ -19,3 +19,5 @@ catalog:
   vitest: 5.1.0
   vite-plus: 1.6.0
   '@vitest/coverage-v8': 5.1.0
+allowBuilds:
+  lefthook: false
